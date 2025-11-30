@@ -13,22 +13,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
-   
+<body class="font-['Poppins'] bg-green-50">
+
 <header id="header">
 <div class="navbar px-24 prime-color">
   <div class="navbar-start">
-    <a class="text-white font-semibold text-xl">Green Earth</a>
+    <a class="text-white font-semibold text-sm md:text-xl">Green Earth</a>
   </div>
   <div class="navbar-center text-white">
-    <ul class="menu menu-horizontal px-1">
+    <ul class="menu menu-horizontal px-1 text-sm md:text-md">
       <li><a>About</a></li>
       <li><a>Gallery</a></li>
       <li><a>Plant a Tree</a></li>
     </ul>
   </div>
   <div class="navbar-end ">
-    <a class="btn btn-active rounded-4xl border-0 font-semibold font- bg-[#FACC15] text-[#15803D] ">Plant a Tree</a>
+    <a class="btn btn-active rounded-4xl border-0 font-semibold font- bg-[#FACC15] text-[#15803D]">Plant a Tree</a>
   </div>
 </div>
 <!-- Banner Section  -->
@@ -42,11 +42,81 @@
   <img src="assets/hero-leaf2.png">
 </div>
 </header>
-<!-- About Campaign Section -->
-<section>
 
+    <!-- Choose Your Trees Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-green-800 text-center mb-12">Choose Your Trees</h2>
+            <!-- Add your tree selection content here -->
+        </div>
+    </section>
+
+    <!-- About the Campaign Section -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-green-800 text-center mb-12">About the Campaign</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Image Column -->
+                    <div class="p-4 rounded-lg">
+                        <img
+                            src="assets/about.png"
+                            alt="Green Earth Plant"
+                            class="w-full h-auto rounded-lg"
+                        >
+                    </div>
+
+                    <!-- Text Content Column -->
+                    <div class="space-y-4">
+                        <p class="text-gray-700 text-lg">
+                           Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we've planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700 text-lg">
+                            <li>Restoration of natural habitats</li>
+                            <li>Improvement of air quality</li>
+                            <li>Support for local communities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-16 bg-green-100">
+  <div class="container mx-auto px-4">
+    <!-- Section Heading -->
+    <h2 class="text-3xl font-bold text-green-800 text-center mb-12 relative">
+      Our Impact  
+    </h2>
+
+    <!-- Impact Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto">
+      <!-- Trees Planted Card -->
+      <div class="bg-white p-10 rounded-lg shadow-sm text-center">
+        <h3 class="text-4xl font-bold text-green-800 mb-2">500K+</h3>
+        <p class="text-gray-600">Trees Planted</p>
+      </div>
+
+      <!-- Communities Involved Card -->
+      <div class="bg-white p-10 rounded-lg shadow-sm text-center">
+        <h3 class="text-4xl font-bold text-green-800 mb-2">120+</h3>
+        <p class="text-gray-600">Communities Involved</p>
+      </div>
+
+      <!-- Countries Reached Card -->
+      <div class="bg-white p-10 rounded-lg shadow-sm text-center">
+        <h3 class="text-4xl font-bold text-green-800 mb-2">30+</h3>
+        <p class="text-gray-600">Countries Reached</p>
+      </div>
+    </div>
+  </div>
 </section>
-    <!-- ECMA Script  -->
-<script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 Green Earth. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
