@@ -43,13 +43,140 @@
 </div>
 </header>
 
-    <!-- Choose Your Trees Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-green-800 text-center mb-12">Choose Your Trees</h2>
-        
+
+    <div class="container mx-auto py-24">
+        <!-- Page Title -->
+        <h1 class="text-2xl sm:text-3xl font-bold text-center my-6 sm:my-8 text-green-800">Choose Your Trees</h1>
+
+    
+        <div class="flex flex-col lg:flex-row gap-4 sm:gap-6">
+            <!-- Left Sidebar - Categories (hidden on mobile by default) -->
+            <div class="lg:block hidden w-full lg:w-64 bg-white p-4 rounded-lg shadow-md order-1 lg:order-1">
+                <h2 class="text-lg sm:text-xl font-semibold mb-4 text-green-800">Categories</h2>
+                <ul tabindex="0" class="space-y-2  bg-base-100 w-full text-gray-500 font-medium">
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base active"><a >All Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Fruit Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Flowering Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Shade Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Medicinal Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Timber Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Evergreen Trees</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Ornamental Plants</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Bamboo</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Climbers</a></li>
+                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Aquatic Plants</a></li>
+                        </ul>
+               
+            </div>
+
+            <!-- Main Content - Tree Cards -->
+            <div class="flex-1 order-2">
+                <!-- Mobile category dropdown (visible only on mobile) -->
+                <div class="lg:hidden mb-4">
+                    <div class="dropdown w-full">
+                        <label tabindex="0" class="btn w-full bg-green-800 text-white mb-2">Categories</label>
+                        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-full">
+                            <li><a>All Trees</a></li>
+                            <li><a>Fruit Trees</a></li>
+                            <li><a>Flowering Trees</a></li>
+                            <li><a>Shade Trees</a></li>
+                            <li><a>Medicinal Trees</a></li>
+                            <li><a>Timber Trees</a></li>
+                            <li><a>Evergreen Trees</a></li>
+                            <li><a>Ornamental Plants</a></li>
+                            <li><a>Bamboo</a></li>
+                            <li><a>Climbers</a></li>
+                            <li><a>Aquatic Plants</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tree Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4">
+                
+                 
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Cart (hidden on mobile) -->
+            <div class="hidden lg:block w-full lg:w-72 bg-white p-4 rounded-lg shadow-md order-3">
+                <h2 class="text-lg sm:text-xl font-semibold mb-4 text-green-800">Your Cart</h2>
+                <div class="space-y-3">
+                    <!-- Cart Item 1 -->
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-medium text-sm sm:text-base">Mango Tree</p>
+                            <p class="text-xs sm:text-sm text-gray-500">₹500 × 1</p>
+                        </div>
+                        <button class="btn btn-xs sm:btn-sm btn-ghost text-red-500">×</button>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-medium text-sm sm:text-base">Guava Tree</p>
+                            <p class="text-xs sm:text-sm text-gray-500">₹450 × 1</p>
+                        </div>
+                        <button class="btn btn-xs sm:btn-sm btn-ghost text-red-500">×</button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="divider my-2"></div>
+
+                    <!-- Total -->
+                    <div class="flex justify-between items-center font-semibold">
+                        <p class="text-sm sm:text-base">Total:</p>
+                        <p class="text-sm sm:text-base">₹950</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Cart Button (visible only on mobile) -->
+            <div class="fixed bottom-0 left-0 right-0 lg:hidden bg-white p-3 shadow-lg z-10">
+                <button class="btn btn-success w-full text-white" onclick="cartModal.showModal()">
+                    View Cart
+                </button>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Mobile Cart Modal -->
+    <dialog id="cartModal" class="modal">
+        <form method="dialog" class="modal-box max-w-sm w-full bg-white">
+            <h3 class="font-bold text-lg text-green-800">Your Cart</h3>
+            <div class="py-4 space-y-3">
+                <!-- Cart Item 1 -->
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="font-medium">Mango Tree</p>
+                        <p class="text-sm text-gray-500">₹500 × 1</p>
+                    </div>
+                    <button class="btn btn-sm btn-ghost text-red-500">×</button>
+                </div>
+
+                <!-- Cart Item 2 -->
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="font-medium">Guava Tree</p>
+                        <p class="text-sm text-gray-500">₹450 × 1</p>
+                    </div>
+                    <button class="btn btn-sm btn-ghost text-red-500">×</button>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider my-2"></div>
+
+                <!-- Total -->
+                <div class="flex justify-between items-center font-semibold">
+                    <p>Total:</p>
+                    <p>₹950</p>
+                </div>
+            </div>
+            <div class="modal-action">
+                <button class="btn btn-success w-full text-white">Checkout</button>
+            </div>
+        </form>
+    </dialog>
 
     <!-- About the Campaign Section -->
     <section class="py-16 bg-green-50">

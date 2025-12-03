@@ -13,3 +13,8 @@
 .dark-text {
     color: #1F2937;
 }
+
+.active {
+    background-color: #15803D;
+    color: white;
+}
