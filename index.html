@@ -52,20 +52,10 @@
         <div class="flex flex-col lg:flex-row gap-4 sm:gap-6">
             <!-- Left Sidebar - Categories (hidden on mobile by default) -->
             <div class="lg:block hidden w-full lg:w-64 bg-white p-4 rounded-lg shadow-md order-1 lg:order-1">
-                <h2 class="text-lg sm:text-xl font-semibold mb-4 text-green-800">Categories</h2>
-                <ul tabindex="0" class="space-y-2  bg-base-100 w-full text-gray-500 font-medium">
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base active"><a >All Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Fruit Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Flowering Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Shade Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Medicinal Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Timber Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Evergreen Trees</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Ornamental Plants</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Bamboo</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Climbers</a></li>
-                            <li class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base"><a >Aquatic Plants</a></li>
-                        </ul>
+                <h2 class="text-lg sm:text-xl font-semibold mb-4 text-green-800 ">Categories</h2>
+                <div id="display-categories" class="space-y-2  bg-base-100 w-full text-gray-500 font-medium sticky top-0">
+                            <p class="py-1 hover:bg-green-50 rounded px-2 text-sm sm:text-base cursor-pointer"><a >All Trees</a></p>  
+                </div>
                
             </div>
 
@@ -76,7 +66,8 @@
                     <div class="dropdown w-full">
                         <label tabindex="0" class="btn w-full bg-green-800 text-white mb-2">Categories</label>
                         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-full">
-                            <li><a>All Trees</a></li>
+                          
+                            <li><a onclick="loadingPlants()">All Trees</a></li>
                             <li><a>Fruit Trees</a></li>
                             <li><a>Flowering Trees</a></li>
                             <li><a>Shade Trees</a></li>
@@ -92,8 +83,9 @@
                 </div>
 
                 <!-- Tree Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4">
-                
+                <div id="TreeCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4">
+                     
+                  
                  
                 </div>
             </div>
@@ -133,7 +125,7 @@
 
             <!-- Mobile Cart Button (visible only on mobile) -->
             <div class="fixed bottom-0 left-0 right-0 lg:hidden bg-white p-3 shadow-lg z-10">
-                <button class="btn btn-success w-full text-white" onclick="cartModal.showModal()">
+                <button class="btn bg-green-800 w-full text-white" onclick="cartModal.showModal()">
                     View Cart
                 </button>
             </div>
@@ -173,7 +165,7 @@
                 </div>
             </div>
             <div class="modal-action">
-                <button class="btn btn-success w-full text-white">Checkout</button>
+                <button class="btn bg-green-800 w-full text-white">Checkout</button>
             </div>
         </form>
     </dialog>
@@ -239,6 +231,19 @@
   </div>
 </section>
 
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+    <div id="plant-details">
+    
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
     <!-- Footer -->
      <div class="bg-green-800 text-white py-8">
             <div class="container mx-auto px-4 py-24 text-center">
@@ -301,5 +306,7 @@
             <p class="text-md">© 2025 Green Earth. All rights reserved.</p>
         
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
